@@ -68,56 +68,54 @@ export default function LkCounter()
 
 const styles = StyleSheet.create({
     counterlayout :{
-        // backgroundColor:'black',
-        // flex:1,
-        // alignItems: 'center',
+        backgroundColor:'grey',
+        flex:1,
+        alignItems: 'center',
+        paddingTop:100,
     },
     counterTitle: {
-        // color:'orange',
-        // fontSize:45,
-        // textAlign:'center',
-        // fontWeight:'bold',
-        // paddingTop:'2%',
-        // paddingBottom:'5%',
-        // fontFamily:'Helvetica',
+        color:'orange',
+        fontSize:45,
+        fontWeight:'bold',
+        paddingBottom:'10%',
     },
 
     // counterDisplay
     counterdisp:{
-        // backgroundColor:'grey',
+        backgroundColor:'black',
         // borderRadius:80,
-        // borderWidth:50,
-        // borderColor:'white',
-        // alignItems:'center',
+        borderWidth:50,
+        borderColor:'white',
+        alignItems:'center',
         // justifyContent: 'center',
-        // height:'200px',
-        // width:'200px',
+        height:200,
+        width:200,
     },
     counterNum:{
-        // fontSize:45,
-        // color:'white',
+        fontSize:45,
+        color:'white',
     },
     //Tappings
     counterTaps :{
-        // color:'orange',
-        // fontSize: 20,
-        // textAlign:'center',
-        // fontWeight:'bold',
-        // padding:'3%',
+        color:'orange',
+        fontSize: 20,
+        textAlign:'center',
+        fontWeight:'bold',
+        padding:'8%',
     },
     //Buttons
     //Increment and decrement buttons
     IncDecButtons:{
-        // paddingTop:'1%',
-        // display:'flex',
-        // flex:0.3,
-        // flexDirection:'row',
+        display:'flex',
+        flex:0.3,
+        flexDirection:'row',
+        paddingBottom:50,
     },
     // Reset Buttons
     resetButtons:{
-        // paddingTop:'5%',
-        // display:'flex',
-        // flex:1,
-        // flexDirection:'row',
+        paddingTop:'5%',
+        display:'flex',
+        flex:1,
+        flexDirection:'row',
     },
 })
