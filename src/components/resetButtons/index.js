@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React  from 'react';
 import { StyleSheet, Text,TouchableOpacity} from 'react-native';
 
-export default function Button(props){
+export default function ResetButton(props){
 
     let{title,action}=props
 
@@ -17,15 +17,15 @@ const styles = StyleSheet.create({
         backgroundColor:'#e87238',
         borderColor:'#4f4a45',
         borderRadius:100,
-        borderWidth:10,
-        height:100,
-        width:120,
+        borderWidth:5,
+        height:50,
+        width:200,
         alignItems: 'center',
         justifyContent: 'center',
     },
     text:{
         fontWeight:'bold',
         color:'white',
-        fontSize:45,
+        fontSize:15,
     }
 })

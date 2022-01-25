@@ -3,6 +3,7 @@ import React,{useState} from 'react';
 import { StyleSheet, Text,View} from 'react-native';
 // import { LinearGradient } from 'expo-linear-gradient';
 import Button from '../Buttons';
+import ResetButton from '../resetButtons';
 
 export default function LkCounter()
 {
@@ -35,12 +36,14 @@ export default function LkCounter()
             style={{ flex:1,alignItems:'center',
             justifyContent:'center', }}> */}
             {/* Title */}
-            <Text style={styles.counterTitle}>LK's Counter</Text>
+            <Text style={styles.counterTitle}>COUNTER </Text>
             {/* Number of times we used the buttons */}
+            <View style={styles.counterupdisp}>
             <View style={styles.counterdisp}>
                 <Text style={styles.counterNum}>{count}</Text>
             </View>
-            <Text style={styles.counterTaps}>NUMBER OF TAPS : {taps} </Text>
+            </View>
+            <Text style={styles.counterTaps}>Number of Taps : {taps} </Text>
             {/* Counter display  */}
             {/* Increment and decrement buttons of the counter */}
             <View style={styles.IncDecButtons}>
@@ -53,11 +56,11 @@ export default function LkCounter()
             </View>
             {/* Reset button */}
             <View style={styles.resetButtons}>
-                <View style={{marginRight:20}}>
-                <Button title={"RESET COUNTER"} action={resetCounter}/>
+                <View style={{marginBottom:10}}>
+                <ResetButton title={" RESET COUNTER"} action={resetCounter}/>
                 </View>
-                <View style={{marginLeft:20}}>
-                <Button title={"RESET TAPS"} action={resetTaps}/>
+                <View style={{marginBottom:20}}>
+                <ResetButton title={" RESET TAPS"} action={resetTaps}/>
                 </View>
             </View>
             {/* </LinearGradient> */}
@@ -68,24 +71,38 @@ export default function LkCounter()
 
 const styles = StyleSheet.create({
     counterlayout :{
-        backgroundColor:'grey',
+        backgroundColor:'black',
         flex:1,
         alignItems: 'center',
         paddingTop:100,
     },
     counterTitle: {
-        color:'orange',
+        color:'#baaaa6',
+        textShadowRadius:80,
+        textShadowColor:'#ff7700',
         fontSize:45,
         fontWeight:'bold',
         paddingBottom:'10%',
     },
 
     // counterDisplay
-    counterdisp:{
+    counterupdisp:{
         backgroundColor:'black',
-        // borderRadius:80,
+        borderRadius:200,
+        borderWidth:10,
+        borderColor:'#baaaa6',
+        alignItems:'center',
+        justifyContent: 'center',
+        height:250,
+        width:250,
+    },
+    counterdisp:{
+        backgroundColor:'#f2590c',
+        borderRadius:100,
         borderWidth:50,
-        borderColor:'white',
+        borderColor:'#f06f2e',
+        borderBottomColor:'#ed601a',
+        borderTopColor:'#ed601a',
         alignItems:'center',
         // justifyContent: 'center',
         height:200,
@@ -94,10 +111,12 @@ const styles = StyleSheet.create({
     counterNum:{
         fontSize:45,
         color:'white',
+        paddingTop:15,
+        fontWeight:'bold',
     },
     //Tappings
     counterTaps :{
-        color:'orange',
+        color:'#baaaa6',
         fontSize: 20,
         textAlign:'center',
         fontWeight:'bold',
@@ -109,13 +128,13 @@ const styles = StyleSheet.create({
         display:'flex',
         flex:0.3,
         flexDirection:'row',
-        paddingBottom:50,
+        paddingBottom:70,
     },
     // Reset Buttons
     resetButtons:{
         paddingTop:'5%',
         display:'flex',
         flex:1,
-        flexDirection:'row',
+        flexDirection:'column',
     },
 })
