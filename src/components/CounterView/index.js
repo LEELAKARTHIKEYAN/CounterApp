@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
 import { StyleSheet, Text,View} from 'react-native';
-// import { LinearGradient } from 'expo-linear-gradient';
 import Button from '../Buttons';
 import ResetButton from '../resetButtons';
 
@@ -32,9 +31,6 @@ export default function LkCounter()
     return(
         <View style={styles.counterlayout}>
             <StatusBar style='auto' />
-            {/* <LinearGradient colors={['#2B1B39','#1D1835','#1A1A37']}
-            style={{ flex:1,alignItems:'center',
-            justifyContent:'center', }}> */}
             {/* Title */}
             <Text style={styles.counterTitle}>COUNTER </Text>
             {/* Number of times we used the buttons */}
@@ -63,8 +59,7 @@ export default function LkCounter()
                 <ResetButton title={" RESET TAPS"} action={resetTaps}/>
                 </View>
             </View>
-            {/* </LinearGradient> */}
-        </View>
+           </View> 
     )
 
 }
@@ -77,9 +72,9 @@ const styles = StyleSheet.create({
         paddingTop:100,
     },
     counterTitle: {
-        color:'#baaaa6',
+        color:'#c0c7cf',
         textShadowRadius:80,
-        textShadowColor:'#ff7700',
+        textShadowColor:'#45d2d4',
         fontSize:45,
         fontWeight:'bold',
         paddingBottom:'10%',
@@ -89,20 +84,20 @@ const styles = StyleSheet.create({
     counterupdisp:{
         backgroundColor:'black',
         borderRadius:200,
-        borderWidth:10,
-        borderColor:'#baaaa6',
+        borderWidth:5,
+        borderColor:'#45d2d4',
         alignItems:'center',
         justifyContent: 'center',
         height:250,
         width:250,
     },
     counterdisp:{
-        backgroundColor:'#f2590c',
+        backgroundColor:'#45d2d4',
         borderRadius:100,
         borderWidth:50,
-        borderColor:'#f06f2e',
-        borderBottomColor:'#ed601a',
-        borderTopColor:'#ed601a',
+        borderColor:'#2f4949',
+        borderBottomColor:'#6c9098',
+        borderTopColor:'#6c9098',
         alignItems:'center',
         // justifyContent: 'center',
         height:200,
@@ -110,13 +105,13 @@ const styles = StyleSheet.create({
     },
     counterNum:{
         fontSize:45,
-        color:'white',
+        color:'#2f4949',
         paddingTop:15,
         fontWeight:'bold',
     },
     //Tappings
     counterTaps :{
-        color:'#baaaa6',
+        color:'#c0c7cf',
         fontSize: 20,
         textAlign:'center',
         fontWeight:'bold',

@@ -14,9 +14,8 @@ export default function ResetButton(props){
 };
 const styles = StyleSheet.create({
     button: {
-        backgroundColor:'#e87238',
-        borderColor:'#4f4a45',
-        borderRadius:100,
+        backgroundColor:'#34f4f3',
+        borderColor:'#2f4949',
         borderWidth:5,
         height:50,
         width:200,
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     },
     text:{
         fontWeight:'bold',
-        color:'white',
+        color:'black',
         fontSize:15,
     }
 })

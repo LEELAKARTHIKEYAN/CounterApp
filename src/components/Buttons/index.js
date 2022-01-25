@@ -14,12 +14,12 @@ export default function Button(props){
 };
 const styles = StyleSheet.create({
     button: {
-        backgroundColor:'#e87238',
-        borderColor:'#4f4a45',
-        borderRadius:100,
-        borderWidth:10,
+        backgroundColor:'#6c9098',
+        borderColor:'#45d2d4',
+        borderRadius:20,
+        borderWidth:3,
         height:100,
-        width:120,
+        width:100,
         alignItems: 'center',
         justifyContent: 'center',
     },
