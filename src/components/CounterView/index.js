@@ -3,28 +3,37 @@ import React,{useState} from 'react';
 import { StyleSheet, Text,View} from 'react-native';
 import Button from '../Buttons';
 import ResetButton from '../resetButtons';
+import useCounterContext from '../ContextUse/ContextProvider';
 
 export default function LkCounter()
 {
 
-    const [count,setCount]= useState(0);
-    const [taps,setTaps]= useState(0);
+    const counterContext = useCounterContext();
+    //const [count,setCount]= useState(0);
+    const [taps,setTaps]= useState(0);                
 
     function increaser(){
-        setCount(count+1);
-        setTaps(taps+1);
+        // setCount(count+1);
+        // setTaps(taps+1);
+        counterContext.setCount(counterContext.count+1)
+        setTaps(taps+1)
     }
 
     function decreaser(){
-        setCount(count-1);
-        setTaps(taps+1);
+        // setCount(count-1);
+        // setTaps(taps+1);
+        counterContext.setCount(counterContext.count-1)
+        setTaps(taps+1)
     }
 
     function resetCounter(){
-        setCount(count-count);
+        // setCount(count-count);
+        counterContext.setCount(counterContext.count-counterContext.count)
+        setTaps(taps+1)
     }
     function resetTaps(){
-        setTaps(taps-taps);
+        // setTaps(taps-taps);
+        counterContext.setCount(counterContext.taps-counterContext.taps)
     }
 
 
