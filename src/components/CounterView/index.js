@@ -33,7 +33,7 @@ export default function LkCounter()
     }
     function resetTaps(){
         // setTaps(taps-taps);
-        counterContext.setCount(counterContext.taps-counterContext.taps)
+        counterContext.setCount(counterContext.count-counterContext.count)
     }
 
 
